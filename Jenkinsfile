@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GIT_EXEC = '/usr/bin/git'
+        GIT_EXEC = '/usr/bin/'
     }
     stages {
         stage("Greeting Message"){
