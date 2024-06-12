@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Greeting Message"){
             steps{
-                git branch: 'main', url: 'https://github.com/gareeb-engineer/Javaaap.git'
+                sh 'echo Hello @aurkito this is jenkins job!!'
             }
         }
     }
