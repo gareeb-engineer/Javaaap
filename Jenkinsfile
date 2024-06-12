@@ -9,5 +9,8 @@ pipeline {
                 sh 'echo Hello @aurkito this is jenkins job!!'
             }
         }
+        stage("Display Readme.md"){
+            sh 'cat README.md'
+        }
     }
 }
