@@ -14,6 +14,18 @@ pipeline {
                 sh 'cat README.md'
             }
         }
+        stage("Install web server"){
+            steps{
+                sh 'chmod +x configure-server.sh'
+                sh './configure-server.sh'
+            }
+        }
+        stage("Deploy Frountend file"){
+            steps{
+                sh 'chmod +x deploy.sh'
+                sh './deploy.sh'
+            }
+        }
     }
     
 }
