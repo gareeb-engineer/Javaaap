@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Clone the Repo!!"){
             steps{
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/gareeb-engineer/Javaaap.git'
+                sh 'git clone https://github.com/gareeb-engineer/Javaaap.git'
                 sh 'pwd'
             }
         }
