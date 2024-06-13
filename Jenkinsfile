@@ -22,7 +22,7 @@ pipeline {
         }
         stage("Install web server"){
             steps{
-                dir('/var/lib/jenkins/workspace/FirstPipeline/') {
+                dir('/home/jenkins/workspace/FirstPipeline') {
                     sh 'chmod +x configure-server.sh'
                     sh './configure-server.sh'
                 }
