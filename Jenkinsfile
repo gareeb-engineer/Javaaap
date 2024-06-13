@@ -37,13 +37,6 @@ pipeline {
             }
         }
     }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-            dir('/home/jenkins/workspace/FirstPipeline/') {
-                    sh 'rm -rf *'
-                }
-        }
-    }
+    
     
 }
