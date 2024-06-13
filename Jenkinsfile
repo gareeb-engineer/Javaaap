@@ -4,6 +4,9 @@ pipeline {
         GIT_EXEC = '/usr/bin/'
     }
     stages {
+        stage("Clone the Repo!!"){
+            git branch: 'main', changelog: false, poll: false, url: 'https://github.com/gareeb-engineer/Javaaap.git'
+        }
         stage("Greeting Message"){
             steps{
                 sh 'echo Hello @aurkito this is jenkins job!!'
