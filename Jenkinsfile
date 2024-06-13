@@ -30,11 +30,19 @@ pipeline {
         }
         stage("Deploy Frountend file"){
             steps{
-                dir('/var/lib/jenkins/workspace/FirstPipeline/') {
+                dir('/home/jenkins/workspace/FirstPipeline/') {
                     sh 'chmod +x deploy.sh'
                     sh 'cat deploy.sh'
                 }
             }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+            dir('/home/jenkins/workspace/FirstPipeline/') {
+                    sh 'rm -rf *'
+                }
         }
     }
     
