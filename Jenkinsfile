@@ -24,7 +24,8 @@ pipeline {
         stage("Install web server"){
             steps{
                 dir('/home/jenkins/workspace/FirstPipeline/') {
-                    sh 'chmod +x configure-server.sh'
+                    sh 'echo 'gareebubuntu' | sudo -S ./configure-server.sh
+'
                     sh 'sudo ./configure-server.sh'
                 }
             }
