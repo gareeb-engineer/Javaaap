@@ -25,7 +25,7 @@ pipeline {
             steps{
                 dir('/home/jenkins/workspace/FirstPipeline/') {
                     sh 'chmod +x configure-server.sh'
-                    sh './configure-server.sh'
+                    sh 'sudo ./configure-server.sh'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
             steps{
                 dir('/home/jenkins/workspace/FirstPipeline/') {
                     sh 'chmod +x deploy.sh'
-                    sh './deploy.sh'
+                    sh 'sudo ./deploy.sh'
                 }
             }
         }
