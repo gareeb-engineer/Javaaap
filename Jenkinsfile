@@ -25,7 +25,6 @@ pipeline {
             steps{
                 dir('/home/jenkins/workspace/FirstPipeline/') {
                     sh 'echo "gareebubuntu" | sudo -S ./configure-server.sh'
-'
                     sh 'sudo ./configure-server.sh'
                 }
             }
