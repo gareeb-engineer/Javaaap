@@ -33,7 +33,7 @@ pipeline {
             steps{
                 dir('/home/jenkins/workspace/FirstPipeline/') {
                     sh 'chmod +x deploy.sh'
-                    sh 'sudo ./deploy.sh'
+                    sh './deploy.sh'
                 }
             }
         }
