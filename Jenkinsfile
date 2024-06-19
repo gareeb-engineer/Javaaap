@@ -18,6 +18,7 @@ pipeline {
         stage("Display Readme.md"){
             steps{
                 sh 'cat README.md'
+                sh 'whoami'
             }
         }
         stage("Install web server"){
